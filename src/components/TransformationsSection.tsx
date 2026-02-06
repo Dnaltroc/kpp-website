@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { TRANSFORMATIONS, type Transformation } from '@/lib/transformations';
 
 export default function TransformationsSection() {
@@ -23,10 +24,13 @@ export default function TransformationsSection() {
               className="group relative bg-gray-900 rounded-xl overflow-hidden aspect-video flex items-center justify-center hover:ring-2 hover:ring-red-500 transition-all text-left"
             >
               {/* Actual thumbnail image */}
-              <img
+              <Image
                 src={video.thumbnail}
                 alt={video.title}
-                className="absolute inset-0 w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 50vw, 400px"
+                className="object-cover"
+                loading="lazy"
               />
               {/* Content overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent z-10"></div>
@@ -79,6 +83,7 @@ export default function TransformationsSection() {
                   className="absolute inset-0 w-full h-full"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                  loading="lazy"
                 />
               ) : selectedVideo.videoType === 'vimeo' ? (
                 <iframe
@@ -86,6 +91,7 @@ export default function TransformationsSection() {
                   className="absolute inset-0 w-full h-full"
                   allow="autoplay; fullscreen; picture-in-picture"
                   allowFullScreen
+                  loading="lazy"
                 />
               ) : (
                 <video

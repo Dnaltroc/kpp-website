@@ -61,8 +61,8 @@ Whether continuing his climb toward a Major League opportunity or coaching athle
   {
     name: 'Cam Cotter',
     title: 'Professional Pitcher | Rehab Coach | Performance Specialist',
-    image: '/team/cam-cotter.jpg',
-    imagePosition: 'object-cover object-top',
+    image: '/team/new-cam-cotter.png',
+    imagePosition: 'object-contain object-center',
     preview: 'Built on real comeback experience — sequencing, tissue capacity, and return-to-velocity rehab that lasts.',
     specialties: ['Return-to-Throw Rehab', 'Tissue Capacity Building', 'Movement Sequencing', 'Injury Prevention'],
     bio: `Cam Cotter's path through baseball is a testament to perseverance, innovation, and relentless commitment to mastery — not just of the game, but of the human body's capacity to recover and perform.

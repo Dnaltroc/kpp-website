@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import StickyBookCall from "@/components/StickyBookCall";
+import RoadTo90Popup from "@/components/RoadTo90Popup";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -42,6 +43,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <StickyBookCall />
+        <RoadTo90Popup />
       </body>
     </html>
   );

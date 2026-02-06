@@ -27,6 +27,7 @@ export default function BookPage() {
               frameBorder="0"
               title="Schedule a call with KPP"
               className="w-full"
+              loading="lazy"
             />
           </div>
 

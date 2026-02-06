@@ -1,7 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import CoachesSection from '@/components/CoachesSection';
-import TransformationsSection from '@/components/TransformationsSection';
+import dynamic from 'next/dynamic';
+
+// Lazy load heavy components to reduce initial bundle size
+const CoachesSection = dynamic(() => import('@/components/CoachesSection'), {
+  loading: () => <div className="py-10 md:py-14 bg-black" />,
+});
+
+const TransformationsSection = dynamic(() => import('@/components/TransformationsSection'), {
+  loading: () => <div className="py-10 md:py-14 bg-gray-50" />,
+});
 
 const BOOK_CALL_URL = 'https://calendly.com/jackson-kirkspitchingperformance/kpp-interest-meeting';
 
@@ -18,13 +26,13 @@ const TESTIMONIALS = [
   },
   {
     name: 'KPP Athlete',
-    result: '+4 MPH',
-    quote: 'Took me from 80–82 to 84–86… got stronger without fatigue. Helped me through the yips.',
+    result: 'Performance ↑',
+    quote: 'Im actually starting to get good agian. I actually excited to go to the field and get after it training tomorrow, the next day, and in the future. Im having fun again.',
   },
   {
     name: 'KPP Athlete',
     result: 'Strength ↑',
-    quote: 'Best shape of my career. Upper body feels amazing. Life is good.',
+    quote: 'In the best shape of my career, Hands downn. Upper boddy feels amazing. Reverse lunged 315 for the first time today! Life is good!',
   },
   {
     name: 'KPP Athlete',
@@ -182,17 +190,17 @@ export default function Home() {
             <div className="bg-gray-900 rounded-xl p-6 text-center border border-gray-800 hover:border-red-500/50 transition-colors">
               <div className="text-4xl md:text-5xl font-bold text-red-500 mb-1">+3.0</div>
               <div className="text-sm text-white font-semibold uppercase tracking-wide">Avg MPH Gain</div>
-              <div className="text-xs text-gray-500 mt-1">across all program athletes</div>
+              <div className="text-xs text-gray-500 mt-1">Across All Program Athletes</div>
             </div>
             <div className="bg-gray-900 rounded-xl p-6 text-center border border-gray-800 hover:border-red-500/50 transition-colors">
               <div className="text-4xl md:text-5xl font-bold text-red-500 mb-1">15%</div>
               <div className="text-sm text-white font-semibold uppercase tracking-wide">Command Improvement</div>
-              <div className="text-xs text-gray-500 mt-1">zone rate increase</div>
+              <div className="text-xs text-gray-500 mt-1">Zone Rate Increase</div>
             </div>
             <div className="bg-gray-900 rounded-xl p-6 text-center border border-gray-800 hover:border-red-500/50 transition-colors">
               <div className="text-4xl md:text-5xl font-bold text-red-500 mb-1">94%</div>
               <div className="text-sm text-white font-semibold uppercase tracking-wide">Success Rate</div>
-              <div className="text-xs text-gray-500 mt-1">athletes hit their goals</div>
+              <div className="text-xs text-gray-500 mt-1">Athletes Hit Their Goals Within First Year </div>
             </div>
           </div>
           <div className="text-center mt-6">
