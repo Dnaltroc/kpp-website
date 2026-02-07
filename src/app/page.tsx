@@ -15,6 +15,10 @@ const TestimonialsSection = dynamic(() => import('@/components/TestimonialsSecti
   loading: () => <div className="py-10 md:py-14 bg-gray-50" />,
 });
 
+const FAQ = dynamic(() => import('@/components/FAQ'), {
+  loading: () => <div className="py-10 md:py-14 bg-white" />,
+});
+
 const BOOK_CALL_URL = 'https://calendly.com/jackson-kirkspitchingperformance/kpp-interest-meeting';
 
 export default function Home() {
@@ -241,46 +245,7 @@ export default function Home() {
       <TestimonialsSection />
 
       {/* FAQ */}
-      <section id="faq" className="py-10 md:py-14 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <p className="text-red-600 font-semibold text-sm uppercase tracking-wider mb-2">Common Questions</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-black">FAQ</h2>
-          </div>
-          <div className="space-y-3">
-            <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
-              <h3 className="font-semibold text-black mb-1.5">What about arm health?</h3>
-              <p className="text-gray-600 text-sm">
-                Arm health is foundational. Our programs incorporate workload management, arm care protocols, and movement assessments. Longevity is always part of the equation. We also have a dedicated rehab coach for any injuries. 
-              </p>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
-              <h3 className="font-semibold text-black mb-1.5">Do you offer remote coaching?</h3>
-              <p className="text-gray-600 text-sm">
-                Yes! Remote includes video analysis, personalized programming, weekly check-ins, nutrition, mental game and direct coaching access. Many of our best results come from remote athletes.
-              </p>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
-              <h3 className="font-semibold text-black mb-1.5">Who is this for?</h3>
-              <p className="text-gray-600 text-sm">
-                Serious pitchers from high school through pro levels. We do not require a certain velocity — we require the right mindset and commitment.
-              </p>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
-              <h3 className="font-semibold text-black mb-1.5">What equipment do I need?</h3>
-              <p className="text-gray-600 text-sm">
-                Minimum: mound access, baseballs, and a phone for video. Access to basic gym equipment. We scale recommendations to your setup and provide weighted ball guidance.
-              </p>
-            </div>
-            <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
-              <h3 className="font-semibold text-black mb-1.5">How does pricing work?</h3>
-              <p className="text-gray-600 text-sm">
-                Transparent pricing after your consultation. No hidden fees. Investment varies by program type and duration.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FAQ />
 
       {/* Final CTA */}
       <section className="py-10 md:py-14 bg-black text-white">

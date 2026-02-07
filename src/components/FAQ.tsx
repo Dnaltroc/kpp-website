@@ -5,11 +5,11 @@ import { useState } from 'react';
 const FAQ_ITEMS = [
   {
     question: 'What about arm health?',
-    answer: 'Arm health is foundational. Our programs incorporate workload management, arm care protocols, and movement assessments. Longevity is always part of the equation.',
+    answer: 'Arm health is foundational. Our programs incorporate workload management, arm care protocols, and movement assessments. Longevity is always part of the equation. We also have a dedicated rehab coach for any injuries.',
   },
   {
     question: 'Do you offer remote coaching?',
-    answer: 'Yes! Remote includes video analysis, personalized programming, weekly check-ins, and direct coaching access. Many of our best results come from remote athletes.',
+    answer: 'Yes! Remote includes video analysis, personalized programming, weekly check-ins, nutrition, mental game and direct coaching access. Many of our best results come from remote athletes.',
   },
   {
     question: 'Who is this for?',
@@ -17,7 +17,7 @@ const FAQ_ITEMS = [
   },
   {
     question: 'What equipment do I need?',
-    answer: 'Minimum: mound access, baseballs, and a phone for video. We scale recommendations to your setup and provide weighted ball guidance.',
+    answer: 'Minimum: mound access, baseballs, and a phone for video. Access to basic gym equipment. We scale recommendations to your setup and provide weighted ball guidance.',
   },
   {
     question: 'How does pricing work?',
