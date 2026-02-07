@@ -27,6 +27,37 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SportsActivityLocation',
+  name: "Kirk's Pitching Performance",
+  description: 'Data-driven pitching development for velocity, command & competitive edge.',
+  url: 'https://kirkspitchingperformance.com',
+  sameAs: [
+    'https://instagram.com/kirkspitchingperformance',
+  ],
+  priceRange: '$$',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    reviewCount: '150',
+  },
+  review: [
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Cortland Clarke' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5' },
+      reviewBody: "Jackson is the best to work with because he isn't someone who will tell you to do something for no reason. Everything he teaches comes from real experience.",
+    },
+    {
+      '@type': 'Review',
+      author: { '@type': 'Person', name: 'Danny F.' },
+      reviewRating: { '@type': 'Rating', ratingValue: '5' },
+      reviewBody: 'Working with Jackson will completely transform your game. His programs are effective and tailored to your individual needs.',
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -34,6 +65,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

@@ -11,40 +11,11 @@ const TransformationsSection = dynamic(() => import('@/components/Transformation
   loading: () => <div className="py-10 md:py-14 bg-gray-50" />,
 });
 
-const BOOK_CALL_URL = 'https://calendly.com/jackson-kirkspitchingperformance/kpp-interest-meeting';
+const TestimonialsSection = dynamic(() => import('@/components/TestimonialsSection'), {
+  loading: () => <div className="py-10 md:py-14 bg-gray-50" />,
+});
 
-const TESTIMONIALS = [
-  {
-    name: 'Chase Geiser',
-    result: 'Velo ↑ + Confidence ↑',
-    quote: 'Before training with Jackson I always had the work ethic but never had a solid plan… within 4 months… PR of 91, earned a scholarship… felt super confident…',
-  },
-  {
-    name: 'KPP Athlete',
-    result: 'Velo ↑ + Command ↑',
-    quote: 'Impact was immediate — I started throwing harder with less effort and my command sharpened. KPP covers the mental + physical sides.',
-  },
-  {
-    name: 'KPP Athlete',
-    result: 'Performance ↑',
-    quote: 'Im actually starting to get good agian. I actually excited to go to the field and get after it training tomorrow, the next day, and in the future. Im having fun again.',
-  },
-  {
-    name: 'KPP Athlete',
-    result: 'Strength ↑',
-    quote: 'In the best shape of my career, Hands downn. Upper boddy feels amazing. Reverse lunged 315 for the first time today! Life is good!',
-  },
-  {
-    name: 'KPP Athlete',
-    result: 'Performance ↑',
-    quote: '4 simulated vs our lineup: 11 Ks, 0 H, 2 BB… landing stuff wherever I wanted.',
-  },
-  {
-    name: 'KPP Athlete',
-    result: 'Athleticism ↑',
-    quote: 'Big eye opener for in-season/out-of-season. Variability week to week made me a better athlete.',
-  },
-];
+const BOOK_CALL_URL = 'https://calendly.com/jackson-kirkspitchingperformance/kpp-interest-meeting';
 
 export default function Home() {
   return (
@@ -267,34 +238,7 @@ export default function Home() {
       <CoachesSection />
 
       {/* Testimonials */}
-      <section className="py-10 md:py-14 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <p className="text-red-600 font-semibold text-sm uppercase tracking-wider mb-2">Success Stories</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-black">What Athletes Say</h2>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            {TESTIMONIALS.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-8 h-8 bg-gray-900 rounded-full flex items-center justify-center text-white font-bold text-xs">
-                      {testimonial.name.split(' ').map(n => n[0]).join('')}
-                    </div>
-                    <p className="font-semibold text-black text-sm">{testimonial.name}</p>
-                  </div>
-                </div>
-                <div className="bg-red-50 text-red-700 text-xs font-semibold px-2 py-1 rounded inline-block mb-2">
-                  {testimonial.result}
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  &quot;{testimonial.quote}&quot;
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TestimonialsSection />
 
       {/* FAQ */}
       <section id="faq" className="py-10 md:py-14 bg-white">
@@ -307,13 +251,13 @@ export default function Home() {
             <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
               <h3 className="font-semibold text-black mb-1.5">What about arm health?</h3>
               <p className="text-gray-600 text-sm">
-                Arm health is foundational. Our programs incorporate workload management, arm care protocols, and movement assessments. Longevity is always part of the equation.
+                Arm health is foundational. Our programs incorporate workload management, arm care protocols, and movement assessments. Longevity is always part of the equation. We also have a dedicated rehab coach for any injuries. 
               </p>
             </div>
             <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
               <h3 className="font-semibold text-black mb-1.5">Do you offer remote coaching?</h3>
               <p className="text-gray-600 text-sm">
-                Yes! Remote includes video analysis, personalized programming, weekly check-ins, and direct coaching access. Many of our best results come from remote athletes.
+                Yes! Remote includes video analysis, personalized programming, weekly check-ins, nutrition, mental game and direct coaching access. Many of our best results come from remote athletes.
               </p>
             </div>
             <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
@@ -325,7 +269,7 @@ export default function Home() {
             <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">
               <h3 className="font-semibold text-black mb-1.5">What equipment do I need?</h3>
               <p className="text-gray-600 text-sm">
-                Minimum: mound access, baseballs, and a phone for video. We scale recommendations to your setup and provide weighted ball guidance.
+                Minimum: mound access, baseballs, and a phone for video. Access to basic gym equipment. We scale recommendations to your setup and provide weighted ball guidance.
               </p>
             </div>
             <div className="bg-gray-50 rounded-lg p-4 border border-gray-100">

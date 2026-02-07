@@ -1,4 +1,10 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Book a Call | Kirk\'s Pitching Performance',
+  description: 'Schedule a free consultation to discuss your pitching goals and see if KPP is the right fit for you.',
+};
 
 const BOOK_CALL_URL = 'https://calendly.com/jackson-kirkspitchingperformance/kpp-interest-meeting';
 
